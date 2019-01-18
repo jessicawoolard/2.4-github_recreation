@@ -22,3 +22,18 @@ header img {
     margin-top: 5px;
     padding: 10px;
 }
+
+.container {
+    border: 2px solid palevioletred;
+    margin-top: 50px;
+}
+.container .profile_pic {
+    padding: 0;
+    width: 100px;
+    height: 130px;
+}
+
+.right_side div {
+
+
+}

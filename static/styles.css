@@ -1,0 +1,24 @@
+
+header img {
+    background-color: #23292D;
+    border-radius: 80%;
+    border: 2px solid #23292D;
+}
+.navigation {
+    background-color: #23292D;
+    color: white;
+    padding: 10px;
+}
+.form-control {
+    width: 25%;
+    display: inline;
+}
+.navigation a {
+    color: white;
+    padding: 5px;
+}
+.navigation i {
+    float: right;
+    margin-top: 5px;
+    padding: 10px;
+}

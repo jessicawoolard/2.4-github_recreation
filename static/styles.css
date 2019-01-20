@@ -26,14 +26,31 @@ header img {
 .container {
     border: 2px solid palevioletred;
     margin-top: 50px;
+
 }
 .container .profile_pic {
     padding: 0;
-    width: 100px;
-    height: 130px;
+    width: auto;
+    height: 230px;
+    display: inline-block;
 }
 
-.right_side div {
+.right_side a{
+}
+.under_profile {
+    border: 2px solid green;
+    width: auto;
+    height: 75px;
+}
 
+.organizations {
+    border: 1px solid grey;
+}
 
+.repo_search {
+    border-top: 2px solid pink;
+}
+.repos {
+    border-top: 2px solid pink;
+    margin: 20px;
 }

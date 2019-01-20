@@ -27,22 +27,74 @@
         </header>
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <img class="profile_pic" src="../static/IMG_2103.jpeg" alt="#">
+                <div class="col-2">
+                    <div class="row">
+                        <img class="profile_pic" src="../static/IMG_2103.jpeg" alt="#">
+                    </div>
+                    <div class="row under_profile">
+                        <a href="#" class="status">Set your status</a>
+                        <a href="#" class="feedback">Give us feedback</a>
+                    </div>
+                    <div class="row">
+                        <p class="name">Jessica Woolard</p>
+                        <p class="username">jessicawoolard</p>
+                    </div>
+                    <div class="row">
+                        <p class="joined">Joined 14 days ago</p>
+                        <button class="edit">Edit</button>
+                    </div>
+                    <div class="row">
+                        <p class="organizations">Organizations</p>
+                    </div>
 
                 </div>
                 <div class="col-9">
                     <div class="row right_side">
-                        <div class="col-2">Overview</div>
-                        <div class="col-2">Repositories</div>
-                        <div class="col-2">Stars</div>
-                        <div class="col-2">Followers</div>
-                        <div class="col-2">Following</div>
+                        <a href="#" class="col-2">Overview</a>
+                        <a href="#" class="col-2">Repositories</a>
+                        <a href="#" class="col-2">Stars</a>
+                        <a href="#" class="col-2">Followers</a>
+                        <a href="#" class="col-2">Following</a>
                     </div>
+                    <div class="row repo_search">
+                        <input class="form-control form-control-sm" type="text" placeholder="Find a repository...">
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Type: All
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">dzfh</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                            </div>
+                        </div>
+                        <div role="none" class="dropdown-divider"></div>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Language: All
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">dzfh</a>
+                            <a class="dropdown-item" href="#">Dropdown link</a>
+                        </div>
+                        <div class="new_button">
+                            <button type="button" class="btn btn-success">New</button>
+                        </div>
+                    </div>
+                    <div class="row repos">
+                        2.4-github_recreation
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="checkbox" checked autocomplete="off"> Star
+                            </label>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
-
-
         </div>
 
     </body>

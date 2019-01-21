@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
               crossorigin="anonymous">
+        <link rel="stylesheet" href="https://octicons.github.com/octicons-logos/octicons-logos.css">
         <link rel="stylesheet" href="../static/styles.css">
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -16,8 +17,9 @@
     </head>
     <body>
         <header class="navigation">
-            <img src="../static/cat.png" alt="#" height="50" width="50"/>
-            <input id="text_bar" class="form-control" type="text" placeholder="Search or jump to...">
+            <img src="../static/Photos/github-cat.png" height="32" width="32"/><input id="text_bar" class="form-control"
+                                                                                      type="text"
+                                                                                      placeholder="Search or jump to...">
             <a href="#" class="pull_request">Pull request</a>
             <a href="#" class="issues">Issues</a>
             <a href="#" class="marketplace">Marketplace</a>
@@ -29,73 +31,103 @@
             <div class="row">
                 <div class="col-2">
                     <div class="row">
-                        <img class="profile_pic" src="../static/IMG_2103.jpeg" alt="#">
+                        <img class="profile_pic" src="{{ profile['avatar_url'] }}" alt="#">
                     </div>
                     <div class="row under_profile">
-                        <a href="#" class="status">Set your status</a>
-                        <a href="#" class="feedback">Give us feedback</a>
+                        <div class="col-12">
+                            <p><img src="../static/Photos/smiley.svg" alt="#"></p>
+                            <p><a href="#" class="status">Set your status</a></p>
+                            <p><a href="#" class="feedback">Give us feedback</a></p>
+                        </div>
                     </div>
                     <div class="row">
-                        <p class="name">Jessica Woolard</p>
-                        <p class="username">jessicawoolard</p>
+                        <div class="col-12 user_name">
+                            <p class="name">{{ profile['name'] }}</p>
+                            <p class="username">{{ profile['login'] }}</p>
+                        </div>
                     </div>
                     <div class="row">
-                        <p class="joined">Joined 14 days ago</p>
-                        <button class="edit">Edit</button>
+                        <div class="col-12 edit">
+                            <p class="joined"> <img src="../static/Photos/clock.svg"> Joined 14 days ago</p>
+                            <button class="edit_button">Edit</button>
+                        </div>
                     </div>
                     <div class="row">
-                        <p class="organizations">Organizations</p>
+                        <div class="col-12">
+                            <p class="organizations">Organizations</p>
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-9">
-                    <div class="row right_side">
-                        <a href="#" class="col-2">Overview</a>
-                        <a href="#" class="col-2">Repositories</a>
-                        <a href="#" class="col-2">Stars</a>
-                        <a href="#" class="col-2">Followers</a>
-                        <a href="#" class="col-2">Following</a>
+                <div class="col-10">
+                    <div class="inner_container">
+                    <div class="row top_nav_buttons">
+                        <div class="col-12 nopadding">
+                        <a href="#" >Overview</a>
+                        <a href="#" >Repositories</a>
+                        <a href="#" >Stars</a>
+                        <a href="#" >Followers</a>
+                        <a href="#" >Following</a>
+                        </div>
                     </div>
                     <div class="row repo_search">
-                        <input class="form-control form-control-sm" type="text" placeholder="Find a repository...">
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Type: All
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <a class="dropdown-item" href="#">dzfh</a>
-                                <a class="dropdown-item" href="#">Dropdown link</a>
+                        <div class="col-7 nopadding">
+                            <input class="form-control form-control-sm" type="text" placeholder="Find a repository...">
+                        </div>
+                        <div class="col-5">
+                            <div class="row repo_buttons">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Type: All
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">dzfh</a>
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+                                <div role="none" class="dropdown-divider"></div>
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Language: All
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                    <a class="dropdown-item" href="#">dzfh</a>
+                                    <a class="dropdown-item" href="#">Dropdown link</a>
+                                </div>
+                                <div class="new_button">
+                                    <button type="button" class="btn btn-success">New</button>
+                                </div>
                             </div>
                         </div>
-                        <div role="none" class="dropdown-divider"></div>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Language: All
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">dzfh</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
-                        <div class="new_button">
-                            <button type="button" class="btn btn-success">New</button>
-                        </div>
-                    </div>
-                    <div class="row repos">
-                        2.4-github_recreation
-                        <div class="btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-secondary active">
-                                <input type="checkbox" checked autocomplete="off"> Star
-                            </label>
-                        </div>
+
                     </div>
 
+                        {% block content %}{% endblock %}
+
+                    </div>
                 </div>
-
             </div>
-        </div>
 
+            <footer>
+                <p class="copyright">&copy; 2019 GitHub, Inc.</p>
+                <a href="#" class="terms">Terms</a>
+                <a href="#" class="privacy">Privacy</a>
+                <a href="#" class="security">Security</a>
+                <a href="#" class="status">Status</a>
+                <a href="#" class="help">Help</a>
+                <img src="../static/Photos/github-cat.png" height="16" width="16"/>
+                <a href="#" class="contact_github">Contact GitHub</a>
+                <a href="#" class="pricing">Pricing</a>
+                <a href="#" class="API">API</a>
+                <a href="#" class="training">Training</a>
+                <a href="#" class="blog">Blog</a>
+                <a href="#" class="about">About</a>
+
+
+            </footer>
+        </div>
     </body>
 </html>

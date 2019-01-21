@@ -3,5 +3,22 @@
 {% block content %}
 
 
+{% for repo in repos %}
+<div class="row repos">
+    <div class="col-10 nopadding">
+        <p>{{ repo['name'] }}</p>
+        <p class="forked">Forked from ccs-winter-2019/2.3-exercises</p>
+        <p><span> <img class="dot" src="../static/Photos/primitive-dot.svg"> HTML</span> <span> <img
+                src="../static/Photos/repo-forked.svg"> 8</span> <span>{{ repo['updated_at'] }}</span></p>
+    </div>
+    <div class="col-2 nopadding">
+        <div class="btn-group-toggle star_button" data-toggle="buttons">
+            <label class="btn btn-secondary">
+                <input class="star" type="checkbox" checked autocomplete="on"> &#x2605; Star
+            </label>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 {% endblock %}

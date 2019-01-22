@@ -18,14 +18,15 @@
                         </div>
                     <div class="row">
                         <div class="col-12 nopadding">
-                            {% if follower['company'] == 'None' %}
+                            {% if follower['company'] %}
                             <p><img src="/static/Photos/organization.svg" alt="#">{{ follower['company'] }} </p>
                             {% endif %}
 
-                            {% if follower['bio'] == 'None' %}
+                            {% if follower['bio'] %}
                             <p> {{ follower['bio'] }} </p>
                             {% endif %}
-                            {% if follower['location'] == 'None' %}
+
+                            {% if follower['location'] %}
                             <p><img src="/static/Photos/location.svg" alt="#">{{ follower['location'] }} </p>
                             {% endif %}
                         </div>

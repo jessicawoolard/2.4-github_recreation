@@ -4,9 +4,49 @@
 
 
 {% for follower in followers %}
+<div class="row followers nopadding">
+    <div class="col-11 nopadding">
+        <div class="row">
+            <div class="col-2 nopadding follower_img">
+                <img class='follower_img' src="{{ follower['avatar_url'] }}" alt="">
+            </div>
+            <div class="col-10 nopadding">
+                <div class="row">
+                    <div class="col-12 nopadding">
+                <p> {{ follower['name'] }} </p>
+                <p> {{ follower['login'] }} </p>
+                        </div>
+                    <div class="row">
+                        <div class="col-12 nopadding">
+                            {% if follower['company'] == 'None' %}
+                            <p><img src="/static/Photos/organization.svg" alt="#">{{ follower['company'] }} </p>
+                            {% endif %}
 
-<p> {{ follower['login'] }}</p>
+                            {% if follower['bio'] == 'None' %}
+                            <p> {{ follower['bio'] }} </p>
+                            {% endif %}
+                            {% if follower['location'] == 'None' %}
+                            <p><img src="/static/Photos/location.svg" alt="#">{{ follower['location'] }} </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 nopadding">
+        <div class="btn-group-toggle star_button" data-toggle="buttons">
+            <label class="btn btn-secondary">
+                <input class="unfollow" type="checkbox" checked autocomplete="on">Unfollow
+            </label>
+        </div>
+    </div>
+
+</div>
+
 
 {% endfor %}
 
 {% endblock %}
+
+<p> {{ follower['login'] }}</p>

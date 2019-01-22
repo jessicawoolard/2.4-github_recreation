@@ -24,6 +24,7 @@
             <a href="#" class="issues">Issues</a>
             <a href="#" class="marketplace">Marketplace</a>
             <a href="#" class="explore">Explore</a>
+            <img class="header_profile_pic" src="{{ profile['avatar_url'] }}" alt="">
             <i class="fas fa-plus"></i>
             <i class="fas fa-bell"></i>
         </header>
@@ -31,29 +32,31 @@
             <div class="row">
                 <div class="col-2">
                     <div class="row">
-                        <img class="profile_pic" src="{{ profile['avatar_url'] }}" alt="#">
+                        <div class="col-12 nopadding">
+                            <img class="profile_pic" src="{{ profile['avatar_url'] }}" alt="#">
+                        </div>
                     </div>
                     <div class="row under_profile">
                         <div class="col-12">
-                            <p><img src="../static/Photos/smiley.svg" alt="#"></p>
+                            <p><img class="octicon-smiley" src="../static/Photos/smiley.svg" alt="#"></p>
                             <p><a href="#" class="status">Set your status</a></p>
                             <p><a href="#" class="feedback">Give us feedback</a></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 user_name">
+                        <div class="col-12 user_name nopadding">
                             <p class="name">{{ profile['name'] }}</p>
                             <p class="username">{{ profile['login'] }}</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 edit">
-                            <p class="joined"> <img src="../static/Photos/clock.svg"> Joined 14 days ago</p>
+                        <div class="col-12 edit nopadding">
+                            <p class="joined"><img src="../static/Photos/clock.svg"> {{ profile['created_at'] }} </p>
                             <button class="edit_button">Edit</button>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 nopadding">
                             <p class="organizations">Organizations</p>
                         </div>
                     </div>
@@ -61,49 +64,53 @@
                 </div>
                 <div class="col-10">
                     <div class="inner_container">
-                    <div class="row top_nav_buttons">
-                        <div class="col-12 nopadding">
-                        <a href="#" >Overview</a>
-                        <a href="#" >Repositories</a>
-                        <a href="#" >Stars</a>
-                        <a href="#" >Followers</a>
-                        <a href="#" >Following</a>
+                        <div class="row top_nav_buttons">
+                            <div class="col-12 nopadding">
+                                <a href="#">Overview</a>
+                                <a href="/">Repositories <span
+                                        class="counter"> {{ profile['public_repos'] }} </span></a>
+                                <a href="#">Stars <span class="counter">{{ profile['public_gists'] }} </span></a>
+                                <a href="/followers">Followers <span class="counter">{{ profile['followers'] }} </span></a>
+                                <a href="#">Following <span class="counter"> {{ profile['following'] }} </span></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row repo_search">
-                        <div class="col-7 nopadding">
-                            <input class="form-control form-control-sm" type="text" placeholder="Find a repository...">
-                        </div>
-                        <div class="col-5">
-                            <div class="row repo_buttons">
-                                <div class="btn-group" role="group">
-                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Type: All
-                                    </button>
+                        <div class="row repo_search">
+                            <div class="col-7 nopadding">
+                                <input class="form-control form-control-sm" type="text"
+                                       placeholder="Find a repository...">
+                            </div>
+                            <div class="col-5">
+                                <div class="row repo_buttons">
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button"
+                                                class="btn btn-secondary dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Type: All
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                            <a class="dropdown-item" href="#">dzfh</a>
+                                            <a class="dropdown-item" href="#">Dropdown link</a>
+                                        </div>
+                                    </div>
+                                    <div role="none" class="dropdown-divider"></div>
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button"
+                                                class="btn btn-secondary dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Language: All
+                                        </button>
+                                    </div>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                         <a class="dropdown-item" href="#">dzfh</a>
                                         <a class="dropdown-item" href="#">Dropdown link</a>
                                     </div>
-                                </div>
-                                <div role="none" class="dropdown-divider"></div>
-                                <div class="btn-group" role="group">
-                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Language: All
-                                    </button>
-                                </div>
-                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                    <a class="dropdown-item" href="#">dzfh</a>
-                                    <a class="dropdown-item" href="#">Dropdown link</a>
-                                </div>
-                                <div class="new_button">
-                                    <button type="button" class="btn btn-success">New</button>
+                                    <div class="new_button">
+                                        <button type="button" class="btn btn-success">New</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
 
                         {% block content %}{% endblock %}
 
@@ -111,20 +118,27 @@
                 </div>
             </div>
 
-            <footer>
-                <p class="copyright">&copy; 2019 GitHub, Inc.</p>
-                <a href="#" class="terms">Terms</a>
-                <a href="#" class="privacy">Privacy</a>
-                <a href="#" class="security">Security</a>
-                <a href="#" class="status">Status</a>
-                <a href="#" class="help">Help</a>
-                <img src="../static/Photos/github-cat.png" height="16" width="16"/>
-                <a href="#" class="contact_github">Contact GitHub</a>
-                <a href="#" class="pricing">Pricing</a>
-                <a href="#" class="API">API</a>
-                <a href="#" class="training">Training</a>
-                <a href="#" class="blog">Blog</a>
-                <a href="#" class="about">About</a>
+            <footer class="row">
+
+                    <div class="col-5 footer_left_side nopadding">
+                        <p class="copyright">&copy; 2019 GitHub, Inc.</p>
+                        <a href="#" class="terms">Terms</a>
+                        <a href="#" class="privacy">Privacy</a>
+                        <a href="#" class="security">Security</a>
+                        <a href="#" class="status">Status</a>
+                        <a href="#" class="help">Help</a>
+                    </div>
+                    <div class="col-2 footer_octicat nopadding">
+                        <img src="../static/Photos/github-cat.png" height="16" width="16"/>
+                    </div>
+                    <div class="col-5 footer_right_side nopadding">
+                        <a href="#" class="contact_github">Contact GitHub</a>
+                        <a href="#" class="pricing">Pricing</a>
+                        <a href="#" class="API">API</a>
+                        <a href="#" class="training">Training</a>
+                        <a href="#" class="blog">Blog</a>
+                        <a href="#" class="about">About</a>
+                    </div>
 
 
             </footer>

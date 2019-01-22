@@ -3,9 +3,22 @@
    margin: 0 !important;
 }
 
+.octicon-smiley {
+    fill: red !important;
+}
+
 header img {
     background-color: #23292D;
     border-radius: 80%;border: 2px solid #23292D;
+    margin-right: 10px;
+}
+.header_profile_pic {
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    float: right;
+    margin-top: 10px;
+
 }
 
 .navigation {
@@ -15,8 +28,12 @@ header img {
 }
 
 .form-control {
-    width: 25%;
+    width: 22%;
     display: inline;
+    height: 28px;
+    font-size: 13px;
+    color: inherit;
+    padding: 6px 8px;
 }
 
 .navigation a {
@@ -39,8 +56,6 @@ header img {
 .container .profile_pic {
     padding: 0;
     width: 100%;
-    height: 229px;
-    display: inline-block;
 }
 
 .under_profile img {
@@ -68,15 +83,15 @@ header img {
 }
 
 .name {
-    font-size: 22px;
+    font-size: 19px;
     float: left;
-    margin-left: -15px;
     font-weight: bold;
-    margin-bottom: 06px;
+    margin-bottom: 0px;
 }
 
-.user_name {
-    margin: 0px;
+.joined {
+    margin-top: 16px;
+    font-size: 14px;
 }
 
 .username {
@@ -84,22 +99,24 @@ header img {
 }
 
 .organizations {
-    margin-top: 10px;
+        margin-top: 10px;
     color: black;
     font-weight: bold;
+    border-top: 1px solid lightgray;
+    padding-top: 13px;
 }
 
 .edit {
-    border-bottom: 2px solid lightgray;
     padding-bottom: 10px;
     font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .edit_button {
     width: 100%;
 }
 .top_nav_buttons{
-    border-bottom: 2px solid lightgray;
+    border-bottom: 1px solid lightgray;
     padding-bottom: 20px;
 }
 .top_nav_buttons a {
@@ -109,6 +126,18 @@ header img {
     margin-right: 30px;
 
 }
+
+.counter {
+    border-radius: 20px;
+    color: #586069;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 2px 5px;
+    background-color: rgba(27,31,35,.08);
+}
+
 .inner_container {
     padding-left: 15px;
 }
@@ -123,10 +152,10 @@ header img {
 }
 
 .repos {
-    border-top: 2px solid lightgray;
+    border-top: 1px solid lightgray;
     margin-top: 10px;
     padding-top: 20px;
-    color: blue;
+    color: #0366d6;
     font-weight: 600;
     font-size: 20px;
 }
@@ -134,6 +163,31 @@ header img {
 .repo_buttons {
     float: right;
 }
+span span.bullet {
+    font-size: 31px;
+    padding-right: 0;
+}
+
+span span.HTML {
+    color: #E34B26;
+}
+
+span span.Jupyter {
+    color: #DA5B0A;
+}
+
+span span.CSS {
+    color: #563D7C;
+}
+
+span span.JavaScript {
+    color: #F1E05A;
+}
+
+.followers {
+    border-top: 1px solid lightgray;
+}
+
 
 .btn-secondary {
     background-color: #eff3f6;
@@ -170,9 +224,12 @@ header img {
 footer {
     display: flex;
     font-size: 12px;
+    width: 100%;
 }
 
-.copyright {
+footer {
+    border-top: 1px solid lightgray;
+    padding-top: 25px;
 
 }
 
@@ -180,7 +237,29 @@ footer > p {
     padding: 5px;
 }
 
-footer > a {
-    padding: 10px;
+.footer_left_side > a{
+    padding-left: 20px;
 }
 
+.footer_right_side > a{
+    padding-right: 20px;
+
+}
+
+.footer_right_side {
+    float: right;
+    text-align: right;
+}
+.footer_left_side {
+    float: left;
+    display: flex;
+}
+
+.footer_octicat {
+    text-align: center;
+}
+
+.follower_img {
+    width: 50px;
+    height: 50px;
+}

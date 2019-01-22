@@ -8,7 +8,7 @@
     <div class="col-10 nopadding">
         <p>{{ repo['name'] }}</p>
         <p class="forked">Forked from ccs-winter-2019/2.3-exercises</p>
-        <p><span> <img class="dot" src="../static/Photos/primitive-dot.svg"> HTML</span> <span> <img
+        <p><span> <span class="bullet {{repo['language']}}"> &#8226; </span>{{ repo['language'] }} </span> <span> <img
                 src="../static/Photos/repo-forked.svg"> 8</span> <span>{{ repo['updated_at'] }}</span></p>
     </div>
     <div class="col-2 nopadding">
